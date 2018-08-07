@@ -5,7 +5,20 @@
 
 </head>
 	<body>
-		<h1> football (soccer)</h1>
-		<p> it's fun to watch </p>
+		{% if likes_same_sport == True %}
+			<h1> football (soccer)</h1>
+			<p> it's fun to watch </p>
+		{% else%}
+        	<h1> football (soccer)</h1>
+			<p> it's fun to watch </p>
+			<h2> Greatest Players (debatable)</h2>
+			<ul>
+				{% for i in players %}
+				<li> {{i}} </li>
+				{% endfor %}
+			</ul>
+		{% endif %}
+
+
 	</body>
 </html>
